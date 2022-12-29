@@ -42,10 +42,14 @@ class _WhatsAppUiState extends State<WhatsAppUi> {
                         children: [
                           GestureDetector(
                               onTap: () {
+                                txtContactNameController.text =
+                                    obj.whatsAppData[index].contactName;
+                                    txtMessageController.text =
+                                    obj.whatsAppData[index].message;
                                 showDialog(
                                   context: context,
                                   builder: (context) => SimpleDialog(
-                                    title: const Text('Add Data'),
+                                    title: const Text('Edit Data'),
                                     contentPadding: const EdgeInsets.symmetric(
                                         vertical: 10, horizontal: 20),
                                     shape: RoundedRectangleBorder(
