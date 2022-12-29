@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
         ChangeNotifierProvider(create: (context) => WhatsAppProvider(),),
       ],
       child:const MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: WhatsAppUi(),
       ),
     );
